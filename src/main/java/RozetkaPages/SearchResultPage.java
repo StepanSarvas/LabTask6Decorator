@@ -1,5 +1,6 @@
 package RozetkaPages;
 
+import decorator.Element;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,13 +11,13 @@ import java.util.List;
 public class SearchResultPage extends DefaultPage {
 
     @FindBy(xpath = "//div[3]/div/rz-filter-searchline/div/input[contains(@class, 'sidebar-search__input')]")
-    WebElement sidebarSearch;
+    Element sidebarSearch;
 
     @FindBy(xpath = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-section-autocomplete/ul[2]/li/a/label")
-    WebElement brandCheckbox;
+    Element brandCheckbox;
 
     @FindBy(xpath = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-section-autocomplete/ul[2]/li/a/label")
-    private List<WebElement> listOfBrands;
+    private List<Element> listOfBrands;
 
     private String checkboxList = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-section-autocomplete/ul[2]/li/a/label";
 
@@ -33,11 +34,11 @@ public class SearchResultPage extends DefaultPage {
         actions.moveToElement(sidebarSearch);
     }
 
-    public WebElement getSidebarSearch() {
+    public Element getSidebarSearch() {
         return sidebarSearch;
     }
 
-    public WebElement getBrandCheckbox() {
+    public Element getBrandCheckbox() {
         return brandCheckbox;
     }
 

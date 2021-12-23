@@ -31,11 +31,11 @@ public class ProductPage extends DefaultPage {
         return Integer.parseInt(cartSum.getText());
     }
 
-    public WebElement getBuyButton() {
+    public Element getBuyButton() {
         return buyButton;
     }
 
-    public WebElement getCartSum() {
+    public Element getCartSum() {
         return cartSum;
     }
 
