@@ -13,9 +13,9 @@ public class testCartSum extends DefaultTest {
 
     @DataProvider(name = "data2", parallel = true)
     public static Object[][] getData() {
-        XMLParser xmlParser = new XMLParser();
-        AllSearchData allSearchData = xmlParser.unmarshall();
+        AllSearchData allSearchData = XMLParser.unmarshall();
         List<SearchData> searchDataList = allSearchData.getAllSearchData();
+
         Object[][] objArray = new Object[searchDataList.size()][];
         for (int i = 0; i < searchDataList.size(); i++) {
             objArray[i] = new Object[1];
