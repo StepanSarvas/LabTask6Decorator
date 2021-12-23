@@ -1,8 +1,8 @@
-import RozetkaPages.MainPage;
-import RozetkaPages.ProductPage;
-import RozetkaPages.SearchResultPage;
-import RozetkaPages.SortedPage;
-import Utils.WebDriverManager;
+import rozetkaPages.MainPage;
+import rozetkaPages.ProductPage;
+import rozetkaPages.SearchResultPage;
+import rozetkaPages.SortedPage;
+import core.WebDriverManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -20,7 +20,7 @@ public class DefaultTest {
     }
 
     @BeforeMethod
-    public void testSettings() {
+    public void openSite() {
         WebDriverManager.getDriver().get(ROZETKA_URL);
     }
 

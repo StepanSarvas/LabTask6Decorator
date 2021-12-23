@@ -1,4 +1,4 @@
-package decorator;
+package core.decorator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.internal.Coordinates;
 
 import java.util.List;
 
-public class Element implements decorator.IElement {
+public class Element implements core.decorator.IElement {
 
     WebElement element;
 
@@ -22,6 +22,7 @@ public class Element implements decorator.IElement {
 
     @Override
     public void click() {
+        System.out.println("Click on element");
         element.click();
     }
 
@@ -32,6 +33,7 @@ public class Element implements decorator.IElement {
 
     @Override
     public void sendKeys(CharSequence... charSequences) {
+        System.out.println("Send Keys");
         element.sendKeys(charSequences);
     }
 
@@ -62,6 +64,7 @@ public class Element implements decorator.IElement {
 
     @Override
     public String getText() {
+        System.out.println("Get text from element");
         return element.getText();
     }
 

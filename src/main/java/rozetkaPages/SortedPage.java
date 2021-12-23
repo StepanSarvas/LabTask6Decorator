@@ -1,6 +1,6 @@
-package RozetkaPages;
+package rozetkaPages;
 
-import decorator.Element;
+import core.decorator.Element;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +11,7 @@ import java.util.List;
 public class SortedPage extends DefaultPage {
 
     @FindBy(css = ".catalog-settings__sorting select")
-    Element sortButton;
+    private Element sortButton;
 
     @FindBy(xpath = "//div[contains(@class, 'goods-tile ng-star-inserted')]")
     private List <WebElement> itemsOnThePage;

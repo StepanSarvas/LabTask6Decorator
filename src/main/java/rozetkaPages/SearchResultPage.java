@@ -1,8 +1,7 @@
-package RozetkaPages;
+package rozetkaPages;
 
-import decorator.Element;
+import core.decorator.Element;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
@@ -11,17 +10,17 @@ import java.util.List;
 public class SearchResultPage extends DefaultPage {
 
     @FindBy(xpath = "//div[3]/div/rz-filter-searchline/div/input[contains(@class, 'sidebar-search__input')]")
-    Element sidebarSearch;
+    private Element sidebarSearch;
 
     @FindBy(xpath = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-section-autocomplete/ul[2]/li/a/label")
-    Element brandCheckbox;
+    private Element brandCheckbox;
 
     @FindBy(xpath = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-section-autocomplete/ul[2]/li/a/label")
     private List<Element> listOfBrands;
 
     private String checkboxList = "//div[contains(@data-filter-name, 'producer')]/div/rz-scrollbar/div/div[1]/div/div/rz-filter-section-autocomplete/ul[2]/li/a/label";
 
-    public void searchByBrand(final String brandName) {
+    public void searchByBrand(String brandName) {
         sidebarSearch.sendKeys(brandName);
     }
 

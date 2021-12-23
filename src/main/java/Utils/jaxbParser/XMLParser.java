@@ -1,4 +1,4 @@
-package parsers.jaxb;
+package Utils.jaxbParser;
 
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;

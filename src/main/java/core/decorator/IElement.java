@@ -1,4 +1,4 @@
-package decorator;
+package core.decorator;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WrapsElement;

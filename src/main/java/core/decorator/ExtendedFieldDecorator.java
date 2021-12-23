@@ -1,4 +1,4 @@
-package decorator;
+package core.decorator;
 
 import org.openqa.selenium.support.pagefactory.DefaultFieldDecorator;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
