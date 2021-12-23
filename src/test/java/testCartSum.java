@@ -31,7 +31,7 @@ public class testCartSum extends DefaultTest {
         getSearchResultPage().scrollToSidebarSearch();
         getSearchResultPage().waitElementLoad(TIME_TO_WAIT, getSearchResultPage().getSidebarSearch());
         getSearchResultPage().searchByBrand(searchData.getBrandName());
-        getSearchResultPage().oneElementLeftWaiter(TIME_TO_WAIT, getSearchResultPage().getCheckboxList());
+        getSearchResultPage().waitOneElementLeft(TIME_TO_WAIT, getSearchResultPage().getCheckboxList());
         getSearchResultPage().waitElementLoad(TIME_TO_WAIT, getSearchResultPage().getBrandCheckbox());
         getSearchResultPage().clickOnBrandCheckbox();
         getSortedPage().sortByPriceDecrease();

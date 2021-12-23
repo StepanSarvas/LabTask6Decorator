@@ -29,7 +29,7 @@ public class DefaultPage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void oneElementLeftWaiter(long holdTime, String xpathOfList){
+    public void waitOneElementLeft(long holdTime, String xpathOfList){
         WebDriverWait wait= new WebDriverWait(driver, holdTime);
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath(xpathOfList),1));
     }
