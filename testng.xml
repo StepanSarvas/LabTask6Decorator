@@ -1,0 +1,12 @@
+<suite name="SmokeSuite" parallel="tests">
+    <test name="tests.MyTestsChrome" parallel="methods" thread-count="3">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testCartSum">
+                <methods>
+                    <include name="checkPrice"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
